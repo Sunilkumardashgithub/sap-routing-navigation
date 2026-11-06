@@ -1,0 +1,51 @@
+<mvc:View
+    controllerName="com.myorg.routingdemo.controller.Detail"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+
+    <Page
+        title="Invoice Details"
+        showNavButton="true"
+        navButtonPress=".onNavBack">
+
+        <content>
+
+            <ObjectHeader
+                title="{invoice>ProductName}"
+                intro="{invoice>ShipperName}"/>
+
+            <Panel
+                headerText="Additional Information"
+                class="sapUiResponsiveMargin">
+
+                <content>
+
+                    <VBox class="sapUiSmallMargin">
+
+                        <Label text="Product Name"/>
+
+                        <Text text="{invoice>ProductName}"/>
+
+                        <Label text="Shipper Name"/>
+
+                        <Text text="{invoice>ShipperName}"/>
+
+                        <Label text="Quantity"/>
+
+                        <Text text="{invoice>Quantity}"/>
+
+                        <Label text="Extended Price"/>
+
+                        <Text text="{invoice>ExtendedPrice}"/>
+
+                    </VBox>
+
+                </content>
+
+            </Panel>
+
+        </content>
+
+    </Page>
+
+</mvc:View>
